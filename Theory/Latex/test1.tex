@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{mathrsfs, amsmath, amsfonts}
+\usepackage[intoc,refpage]{nomencl}
+\usepackage{hyperref}
+\usepackage{typearea}
+\usepackage{lipsum}
+\newcommand{\ignore}[2]{\hspace{0in}#2}
+\renewcommand{\nomname}{List of Notations}
+\renewcommand*{\pagedeclaration}[1]{, \hyperpage{#1}}
+\makenomenclature
+\newcommand{\tr}{\hyperlink{nomen.a}{t^r}}
+
+
+\begin{document}
+
+\lipsum[1-2]
+
+\end{document}
