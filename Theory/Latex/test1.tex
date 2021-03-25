@@ -4,6 +4,7 @@
 \usepackage{hyperref}
 \usepackage{typearea}
 \usepackage{lipsum}
+
 \newcommand{\ignore}[2]{\hspace{0in}#2}
 \renewcommand{\nomname}{List of Notations}
 \renewcommand*{\pagedeclaration}[1]{, \hyperpage{#1}}
@@ -33,6 +34,10 @@
   T_{r}= E = M\\
   m=3\Delta
   \end{align*}
-
+  
+  %\nomenclature{$T_r$}{Torque of rotor}
+  \clearpage
+  \printnomenclature[1.5cm]   % Change the value between square brackets
+  % to increase space between symbols and descriptions
 
 \end{document}
