@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{mathrsfs, amsmath, amsfonts}
+\usepackage[intoc,refpage]{nomencl}
+\usepackage{hyperref}
+\usepackage{typearea}
+\usepackage{lipsum}
+
+\newcommand{\ignore}[2]{\hspace{0in}#2}       % Create in-line comment area, copy,paste ignore.cwl to yours texstudio user directory
+  %\renewcommand{\nomname}{List of Notations} % Rename the nomenclature section
+\renewcommand*{\pagedeclaration}[1]{, \hyperpage{#1}}
+\makenomenclature
+\newcommand{\tr}{\hyperlink{nomen.a}{t^r}}
+
+
+\begin{document}
+
+  \lipsum[1-2]
+  \begin{align*}
+    a + t^{r} + F = E = M\\
+    \tr + 4\\
+    m=3
+  \end{align*}
+  
+  \nomenclature{$M$}{Mass}
+  \nomenclature{$c$}{Speed of Light}
+  %\nomenclature{$T_r$}{Torque of rotor}}
+  \nomenclature{$T_r$}{\hypertarget{nomen.a}{Torque of rotor}}
+  The variable  \ignore{t^r} $\tr$ is the...
+
+  \clearpage
+
+  \lipsum[3]
+  \begin{align*}
+  T_{r}= E = M\\
+  m=3\Delta
+  \end{align*}
+  
+  %\nomenclature{$T_r$}{Torque of rotor}
+  \clearpage
+  \printnomenclature[1.5cm]   % Change the value between square brackets
+  % to increase space between symbols and descriptions
+
+\end{document}
