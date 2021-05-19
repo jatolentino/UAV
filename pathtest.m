@@ -45,7 +45,9 @@ y = 10*sin(2*z);
 x = 10*cos(2*z);
 plot3(x,y,z);
 beaz = 0:3*0.031416:3*2*3.1416;
+
 %set(gcf,'Units','normalized','OuterPosition',[0 0 1 1]);
+%% ADD THE PART TO SAVE VIDEO %%
 for i = 1: length(z)
     %lon = [0 0.1 2 4 4  5 6 7 9 10];    % Y
     %lon = y(i);
@@ -63,3 +65,17 @@ for i = 1: length(z)
 	pause(0.3);
     %pause;
 end
+
+%% PART TO SAVE VIDEO
+%v = VideoWriter('mydrone.avi');
+%v.FrameRate = 10;
+%open(v)
+%for i = 1: length(z)
+%	trans = makehgtform('translate',[x(i) y(i) z(i)]);
+%  rotz = makehgtform('zrotate',beaz(i));
+%	set(combined_objects, 'Matrix', trans*rotz);
+%  frame = getframe(gcf);
+%  writeVideo(v,frame);
+%	pause(0.3);
+%end
+%close(v)
