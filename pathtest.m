@@ -27,4 +27,32 @@ h(5) = surface(xc, (1.5*yc)-1.3, z, 'FaceColor', 'red');
 %Create group object and parent surfaces
 combined_objects = hgtransform('Parent',ax);
 set(h,'Parent',combined_objects)
+% Set the renderer to OpenGL and update the display
+set(gcf, 'Render','opengl')
 
+% Concatenate the transforms and
+% set the transform matrix property
+% set(t, 'Matrix',Rz)
+drawnow
+
+% lon = [ 0 0.1 2 4 4  5 6 7  8 9 10];
+% lat = [0 1 1 1 0 0 0 -1 -1 -1 -1];
+% bea = [0 -1 0 0 0.5 0 0 0.5 0 0 0];
+
+z = 0:0.05:10;
+y = 6*sin(2*z);
+x = 6*cos(2*z);
+plot3(x,y,z);
+beaz = 0:3*0.031416:3*2*3.1416;
+set(gcf,'Units','normalized','OuterPosition',[0 0 1 1]);
+for i = 1: length(z)
+    %lon = [0 0.1 2 4 4  5 6 7 9 10];    % Y
+    %lon = y(i);
+    %lat = x(i);
+    %lat = [0 1 1 1 0 0 0 -1 -1 -5]; % X
+    %bea = [0 3.1416 0 0 0.5 0 0 0.5 0 0 0]; % yaw or PSI angles
+    %bea = beaz(i);
+    %alt = [0 1 1.5 2 2.5 3 3.5 4 4.5 5]; % Zc
+    %alt = z(i);
+
+end
