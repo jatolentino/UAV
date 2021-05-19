@@ -46,3 +46,20 @@ x = 10*cos(2*z);
 plot3(x,y,z);
 beaz = 0:3*0.031416:3*2*3.1416;
 %set(gcf,'Units','normalized','OuterPosition',[0 0 1 1]);
+for i = 1: length(z)
+    %lon = [0 0.1 2 4 4  5 6 7 9 10];    % Y
+    %lon = y(i);
+    %lat = x(i);
+    %lat = [0 1 1 1 0 0 0 -1 -1 -5]; % X
+    %bea = [0 3.1416 0 0 0.5 0 0 0.5 0 0 0]; % yaw or PSI angles
+    %bea = beaz(i);
+    %alt = [0 1 1.5 2 2.5 3 3.5 4 4.5 5]; % Zc
+    %alt = z(i);
+	trans = makehgtform('translate',[x(i) y(i) z(i)]);
+    %trans = makehgtform('translate',[lat(i) y(i) alt(i)]);
+	%rotz = 1;
+    rotz = makehgtform('zrotate',beaz(i));
+	set(combined_objects, 'Matrix', trans*rotz);
+	pause(0.3);
+    %pause;
+end
