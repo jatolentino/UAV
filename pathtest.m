@@ -54,5 +54,11 @@ for i = 1: length(z)
     %bea = beaz(i);
     %alt = [0 1 1.5 2 2.5 3 3.5 4 4.5 5]; % Zc
     %alt = z(i);
-
+	   trans = makehgtform('translate',[x(i) y(i) z(i)]);
+    %trans = makehgtform('translate',[lat(i) y(i) alt(i)]);
+	   %rotz = 1;
+    rotz = makehgtform('zrotate',beaz(i));
+	  set(combined_objects, 'Matrix', trans*rotz);
+	  pause(0.3);
+    %pause;
 end
