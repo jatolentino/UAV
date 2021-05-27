@@ -6,7 +6,6 @@ clc; clear; close all;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %constants = plantConstants;     % The function where the 
                                 % variables come is myConstants
-
 hold on;
 grid on;
 view(3);
