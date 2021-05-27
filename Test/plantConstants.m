@@ -7,8 +7,8 @@ classdef plantConstants
    g = 9.807            % [m*s^2]   Earth gravity
    Jtp = 1.302*10^(-6)  % [N*m*s^2] = kg*m^2 Moment of inertia of the propellers
    Ts = 0.1             % [s]       Sample time
-   pi = 3.141592
-   a = 2
+   % pi = 3.14
+   mypi = 3.141592
    
    % Matrix weights
    Q = [10 0 0; 0 10 0; 0 0 10]     % Ouput weights
@@ -16,8 +16,8 @@ classdef plantConstants
    R = [10 0 0; 0 10 0; 0 0 10]     % Input weights
    
    % Mechanic & fluid properties
-   ct = 7.6184*10^(-8)*(60/(2*plantConstants.a))^2    % [N*s^2]
-   cq = 2.6839*10^(-9)*(60/(2*plantConstants.a))^2    % [N*s^2]
+   ct = 7.6184*10^(-8)*(60/(2*plantConstants.mypi))^2    % [N*s^2]
+   cq = 2.6839*10^(-9)*(60/(2*plantConstants.mypi))^2    % [N*s^2]
    end
    
 end
