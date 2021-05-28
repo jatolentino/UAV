@@ -10,9 +10,9 @@ pCs = plantConstants;
 xt = 0;     % initial X position
 yt = -1;    % initial Y position
 zt = 0;     % initial Z position
-phit = 0;   % initial phi angle
-thetat = 0; % initial theta angle
-psit = 0;   % initial psi angle
+phit = 0;   % initial Euler phi angle
+thetat = 0; % initial Euler theta angle
+psit = 0;   % initial Euler psi angle
 
 % 1.2 Initial velocities
 ut = 0;
