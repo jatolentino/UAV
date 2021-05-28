@@ -30,7 +30,7 @@ X_dotdot_ref = -8*(pi*f)^2*sin(2*pi*f*t);
 Y_dotdot_ref = -8*(pi*f)^2*cos(2*pi*f*t);
 
 
-%%% 3. Computing deltas of distance in x, y and z %%%%
+%%% 3. Computing deltas of distance in X, Y and Z %%%%
 % Compute psi with the dy/dx
 dx = X_ref(2:length(X_ref)) - X_ref(1:length(X_ref)-1);
 dy = Y_ref(2:length(Y_ref)) - Y_ref(1:length(Y_ref)-1);
