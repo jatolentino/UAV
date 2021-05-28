@@ -7,12 +7,12 @@ pCs = plantConstants;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % 1.1 Initial position
-xt = 0;
-yt = -1;
-zt = 0;
-phit = 0;
-thetat = 0;
-psit = 0;
+xt = 0;     % initial X position
+yt = -1;    % initial Y position
+zt = 0;     % initial Z position
+phit = 0;   % initial phi angle
+thetat = 0; % initial theta angle
+psit = 0;   % initial psi angle
 
 % 1.2 Initial velocities
 ut = 0;
