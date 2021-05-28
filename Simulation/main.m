@@ -14,7 +14,7 @@ phit = 0;   % initial Euler phi angle
 thetat = 0; % initial Euler theta angle
 psit = 0;   % initial Euler psi angle
 
-% 1.2 Initial velocities
+% 1.2 Initial velocities in the body frame
 ut = 0;
 vt = 0;
 wt= 0;
