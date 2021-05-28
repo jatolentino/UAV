@@ -57,8 +57,6 @@ states = [ut,vt,wt,pt,qt,rt,xt,yt,zt,phit,thetat,psit];
 
 
 
-
-
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % . 
