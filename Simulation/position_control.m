@@ -30,7 +30,6 @@ xdot = [1 0 0]*Rzyx*[u;v;w];
 ydot = [0 1 0]*Rzyx*[u;v;w];
 zdot = [0 0 1]*Rzyx*[u;v;w];
 
-
 %% 2. Computing the ux, uy and uz
 %%% k1= -2 and k2 = -3
 % [x_ref,x_dot_ref,y_ref,y_dot_ref,z_ref,z_dot_ref,psi_ref]
