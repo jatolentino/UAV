@@ -59,6 +59,12 @@ d = sin(psi_ref);
 %% Computing theta_ref, phi_ref and U1
 theta_ref = atan(a.*c + b.*d);
 
-
+if or(abs(psi_ref)<pi/4,abs(psi_ref)>3*pi/4)
+%if abs(psi_ref)<pi/4 || abs(psi_ref)>3*pi/4
+    phi_ref = atan(cos(theta_ref).*(tan(theta_ref).*d-b)./c);
+else
+    phi_ref = atan(cos(theta_ref).*(a-tan(theta_ref).*c)./d);
+end
+U1 = m*(vz + g)./(cos(phi_ref).*cos(theta_ref));
 
 end
