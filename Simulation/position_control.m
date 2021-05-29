@@ -56,6 +56,9 @@ b = vy./(vz + g);
 c = cos(psi_ref);
 d = sin(psi_ref);
 
+%% Computing theta_ref, phi_ref and U1
+theta_ref = atan(a.*c + b.*d);
+
 
 
 end
