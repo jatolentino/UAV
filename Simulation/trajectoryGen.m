@@ -1,61 +1,45 @@
-function [X_ref,X_dot_ref,X_dotdot_ref,Y_ref,Y_dot_ref,Y_dotdot_ref,Z_ref,Z_dot_ref,Z_dotdot_ref,psiInt] = trajectoryGen(optionTrajectory)
+function [X_ref,X_dot_ref,X_dotdot_ref,Y_ref,Y_dot_ref,Y_dotdot_ref,Z_ref,Z_dot_ref,Z_dotdot_ref,psiInt] = trajectoryGen(optionTrajectory,t)
 %import constants.*;
 
-%%% 1. Calling the paremeters %%%%%
-
-Ts = plantConstants.Ts;     % Ts=0.1
-subIt = 4;                  % 4 iterations inside
-t = 0:Ts*subIt:100;         % t 
+%%% 1. Calling the paremeters of the PATH %%%%%
+%t = 0:Ts*subIt:100;         % t 
 f = 0.025;
+initialHeight = 5;      % Initial point where the path begins
+finalHeight = 25;       % Final point wher the path ends
+r = 2;
+pathAngle = 2*pi*f*t;
+zpathLength =  finalHeight - initialHeight;
+%% 2. Defining wind conditions
+% C_D_u =  1.9;
+% C_D_v = 1.6;
+% C_D_w = 1.4;
+% 
+% % 2.1 Drag force across the section area [m^2]
+% A_u = 2*1*0.01+0.05^2;
+% A_v = 2*1*0.01+0.05^2;
+% A_w = 2*2*1*0.01+0.05^2;
 
-%%% 2. Selecting the trajectory %%%%
+%% 3. Selecting the trajectory %%%%
 switch optionTrajectory
+    case 0
+        X_ref = r/5*sin(pathAngle) + t/100;
+        Y_ref = t/100 - 1;
+        Z_ref =  initialHeight + t*zpathLength./t(length(t));
     case 1
-        Z_ref = t;
-        Y_ref = 2*sin(2*pi*f*t);
-        X_ref = 2*cos(2*pi*t);
+        X_ref = r*cos(pathAngle);
+        Y_ref = r*sin(pathAngle);
+        Z_ref = initialHeight + t*zpathLength./t(length(t));
         %psi_refp = atan(Y_ref./X_ref);
     case 2
         Y_ref = t;
         X_ref = 2*sin(2*pi*f*t);
         Z_ref = 2*cos(2*pi*f*t);
         %psi_refp = atan(Y_ref./X_ref);
-end
-Z_dot_ref = ones(1,length(t));
-Y_dot_ref = 4*pi*f*cos(2*pi*f*t);
-X_dot_ref = -4*pi*f*sin(2*pi*f*t);
+    case 3
+        X_ref = r/5*sin(pathAngle) + t/100;
+        Y_ref = t/100 - 1;
+        Z_ref =  initialHeight + t*zpathLenght./t(length(t));
 
-Z_dotdot_ref = zeros(1,length(t));
-X_dotdot_ref = -8*(pi*f)^2*sin(2*pi*f*t);
-Y_dotdot_ref = -8*(pi*f)^2*cos(2*pi*f*t);
-
-
-%%% 3. Computing deltas of distance in X, Y and Z %%%%
-% Compute psi with the dy/dx
-dx = X_ref(2:length(X_ref)) - X_ref(1:length(X_ref)-1);
-dy = Y_ref(2:length(Y_ref)) - Y_ref(1:length(Y_ref)-1);
-dz = Z_ref(2:length(Z_ref)) - Z_ref(1:length(Z_ref)-1);
-dx = [dx(1), dx];
-dy = [dy(1), dy];
-dz = [dz(1), dz];
-
-%%% 4. Creating the yaw angle of reference psiInt %%%%%
-psi = zeros(1,length(X_ref));
-psiInt = psi;                   % psiInt is psi_ref
-psi(1) = mod(atan2(Y_ref(1),X_ref(1)),2*pi) + pi/2;
-psi(2:length(psi)) = atan2(dy(2:length(dy)),dx(2:length(dy)));
-dpsi = psi(2:length(psi))-psi(1:length(psi)-1);
-psiInt(1) = psi(1);
-
-for i = 2:length(psiInt)
-    if dpsi(i-1) < -pi
-        psiInt(i) = psiInt(i-1) + dpsi(i-1) + 2*pi;
-    elseif dpsi(i-1) > pi
-        psiInt(i) = psiInt(i-1) + dpsi(i-1) - 2*pi;
-    elseif dpsi(i-1) <= pi
-        psiInt(i) = psiInt(i-1) + dpsi(i-1);
-    end
-end
 
 
 
