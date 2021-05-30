@@ -68,6 +68,25 @@ dx = [dx(1), dx];
 dy = [dy(1), dy];
 dz = [dz(1), dz];
 
+%%% 4. Creating the yaw angle of reference psiInt %%%%%
+psi = zeros(1,length(X_ref));
+psiInt = psi;                   % psiInt is psi_ref
+%psi(1) = mod(atan2(Y_ref(1),X_ref(1)),2*pi) + pi/2;
+psi(1) = atan2(Y_ref(1),X_ref(1)) + pi/2;
+psi(2:length(psi)) = atan2(dy(2:length(dy)),dx(2:length(dy)));
+dpsi = psi(2:length(psi))-psi(1:length(psi)-1);
+psiInt(1) = psi(1);
+
+for i = 2:length(psiInt)
+    if dpsi(i-1) < -pi
+        psiInt(i) = psiInt(i-1) + dpsi(i-1) + 2*pi;
+    elseif dpsi(i-1) > pi
+        psiInt(i) = psiInt(i-1) + dpsi(i-1) - 2*pi;
+    elseif dpsi(i-1) < pi
+        psiInt(i) = psiInt(i-1) + dpsi(i-1);
+    end
+end
+
 
 
 
