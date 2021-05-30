@@ -40,7 +40,33 @@ switch optionTrajectory
         Y_ref = t/100 - 1;
         Z_ref =  initialHeight + t*zpathLenght./t(length(t));
 
+end
+% for the option 1
+X_dot_ref = -r*2*pi*f*sin(pathAngle);
+Y_dot_ref = r*2*pi*f*cos(pathAngle);
+Z_dot_ref = ones(1,length(t))*zpathLength/t(length(t));
 
+X_dotdot_ref = -r*(2*pi*f)^2*cos(pathAngle);
+Y_dotdot_ref = -r*(2*pi*f)^2*sin(pathAngle);
+Z_dotdot_ref = zeros(1,length(t));
+
+% for the option 0
+% X_dot_ref =  r/5*pathAngle.*cos(pathAngle) + 1/100;
+% Y_dot_ref =  1/100*ones(length(t));
+% Z_dot_ref =  zpathLength./t(length(t)).*ones(length(t));
+% 
+% X_dotdot_ref = -r/5*pathAngle.^2.*sin(pathAngle);
+% Y_dotdot_ref =  zeros(1,length(t));
+% Z_dotdot_ref =  zeros(1,length(t));
+
+%%% 3. Computing deltas of distance in x, y and z %%%%
+% Compute psi with the dy/dx
+dx = X_ref(2:length(X_ref)) - X_ref(1:length(X_ref)-1);
+dy = Y_ref(2:length(Y_ref)) - Y_ref(1:length(Y_ref)-1);
+dz = Z_ref(2:length(Z_ref)) - Z_ref(1:length(Z_ref)-1);
+dx = [dx(1), dx];
+dy = [dy(1), dy];
+dz = [dz(1), dz];
 
 
 
