@@ -66,7 +66,19 @@ states = [ut,vt,wt,pt,qt,rt,xt,yt,zt,phit,thetat,psit];
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+counter = 0;
+%Hdbstore = [];
+Hdbstore = {};
+Cdbstore = {};
+AdciStore = {};
+FdbTstore = {};
+statesssau = {};
+References = {};
+duss = {};
+U2s = {};
+U3s = {};
+U4s = {};
+dus3 = {};
 for itotal = 1:outterLoops-1      % 251
     [theta_ref, phi_ref, U1] = positionControl(states,x_ref(itotal+1),x_dot_ref(itotal+1),x_dotdot_ref(itotal+1),y_ref(itotal+1),...
         y_dot_ref(itotal+1),y_dotdot_ref(itotal+1),z_ref(itotal+1),z_dot_ref(itotal+1),z_dotdot_ref(itotal+1),psi_ref(itotal+1));
