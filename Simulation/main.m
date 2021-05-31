@@ -49,7 +49,6 @@ innerLoops = pCs.innerLoops;    % 4 iterations inside, for the MPC
 t = 0:Ts*innerLoops:100;        % duration of the simulation
 outterLoops = length(t);        % 251 for the Feedback
 
-
 % 2.2 Initial and future States
 states = [ut,vt,wt,pt,qt,rt,xt,yt,zt,phit,thetat,psit];
 
@@ -61,7 +60,6 @@ states = [ut,vt,wt,pt,qt,rt,xt,yt,zt,phit,thetat,psit];
 
 %%
 [theta_ref, phi_ref, U1] = position_control(states,x_ref,x_dot_ref,x_dotdot_ref,y_ref,y_dot_ref,y_dotdot_ref,z_ref,z_dot_ref,z_dotdot_ref,psi_ref);
-
 
 
 
