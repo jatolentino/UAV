@@ -64,7 +64,7 @@ states = [ut,vt,wt,pt,qt,rt,xt,yt,zt,phit,thetat,psit];
 
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% 3. Initialize the Contorl algorithms
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 counter = 0;
 %Hdbstore = [];
