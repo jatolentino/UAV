@@ -83,5 +83,12 @@ for itotal = 1:outterLoops-1      % 251
     refNestedAngles = [];
     temporaryAngles = [Phi_ref,Theta_ref,Psi_ref];
     refNestedAngles = [refNestedAngles ; temporaryAngles];
-
+    refSignals = zeros(1,length(Phi_ref)*statesToControl);
+    kSig = 1;
+    for i = 1:statesToControl:length(Phi_ref)*statesToControl       % 1,2,3  4,5,6  [phiref0 thetaref0 psiref0   phiref1 thetaref1 psiref1...
+       refSignals(i) = Phi_ref(kSig);
+       refSignals(i+1) = Theta_ref(kSig);
+       refSignals(i+2) = Psi_ref(kSig);
+       kSig = kSig+1;
+    end
 end
