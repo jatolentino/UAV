@@ -76,4 +76,12 @@ for itotal = 1:outterLoops-1      % 251
     
     % 3.1.1 Making psi increase continuosly in the horizon
     Psi_ref = zeros(1,innerLoops+1)'
+
+    for itpsi = 1:innerLoops+1   % 4
+            Psi_ref(itpsi,1) = psi_ref(itotal) + (itpsi-1)*(psi_ref(itotal+1) - psi_ref(itotal))/innerLoops;
+        end
+        refNestedAngles = [];
+        temporaryAngles = [Phi_ref,Theta_ref,Psi_ref];
+        refNestedAngles = [refNestedAngles ; temporaryAngles];
+    end
 end
