@@ -59,10 +59,21 @@ states = [ut,vt,wt,pt,qt,rt,xt,yt,zt,phit,thetat,psit];
 %plot3(x_ref,y_ref,z_ref)
 
 %%
-[theta_ref, phi_ref, U1] = position_control(states,x_ref,x_dot_ref,x_dotdot_ref,y_ref,y_dot_ref,y_dotdot_ref,z_ref,z_dot_ref,z_dotdot_ref,psi_ref);
+%%[theta_ref, phi_ref, U1] = position_control(states,x_ref,x_dot_ref,x_dotdot_ref,y_ref,y_dot_ref,y_dotdot_ref,z_ref,z_dot_ref,z_dotdot_ref,psi_ref);
 
 
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+for itotal = 1:outterLoops-1      % 251
+    [theta_ref, phi_ref, U1] = positionControl(states,x_ref(itotal+1),x_dot_ref(itotal+1),x_dotdot_ref(itotal+1),y_ref(itotal+1),...
+        y_dot_ref(itotal+1),y_dotdot_ref(itotal+1),z_ref(itotal+1),z_dot_ref(itotal+1),z_dotdot_ref(itotal+1),psi_ref(itotal+1));
+    
+    Phi_ref = phi_ref*ones(1,innerLoops+1)';
+    Theta_ref = theta_ref*ones(1,innerLoops+1)';
+    
+    % 3.1.1 Making psi increase continuosly in the horizon
+    Psi_ref = zeros(1,innerLoops+1)'
+end
