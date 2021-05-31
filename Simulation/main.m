@@ -91,4 +91,26 @@ for itotal = 1:outterLoops-1      % 251
        refSignals(i+2) = Psi_ref(kSig);
        kSig = kSig+1;
     end
+    count = 1;
+    hz = pCs.hz;
+    for i = 1:innerLoops
+        [Ad,Bd,Cd,Dd,xdot,ydot,zdot,phi,theta,psi,phidot,thetadot,psidot] = discretePlant(states);%,sumOmegas);
+        % for graph
+        tempInertialVel = [xdot ydot zdot];
+        nestedInertialVel = [];
+        nestedInertialVel = [nestedInertialVel;tempInertialVel];
+        % ----
+        statesAugmented = [phi;phidot;theta;thetadot;psi;psidot;U2;U3;U4];
+        count = count + statesToControl;
+        if count + statesToControl*hz - 1 <= length(refSignals)
+            reference = refSignals(count:count+statesToControl*hz-1)';
+        else
+            reference = refSignals(count:length(refSignals))';
+            hz = hz - 1;
+        end
+        
+        
+        
+        
+    end
 end
