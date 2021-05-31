@@ -108,7 +108,14 @@ for itotal = 1:outterLoops-1      % 251
             reference = refSignals(count:length(refSignals))';
             hz = hz - 1;
         end
-        
+        [Hdb,FdbT,Cdb,Adci] = attitudeControl(Ad,Bd,Cd,Dd,hz);
+        counter = counter + 1;
+        statesssau{counter}  = statesAugmented;
+        Hdbstore{counter} = Hdb;
+        FdbTstore{counter} = FdbT;
+        Cdbstore{counter} = Cdb;
+        Adcistore{counter} = Adci;
+        References{counter} = reference;
         
         
         
