@@ -31,7 +31,6 @@ omega2=110*pi/3; % rad/s at t = -1s
 omega3=110*pi/3; % rad/s at t = -1s
 omega4=110*pi/3; % rad/s at t = -1s
 
-
 % 1.4 Initial thurst
 U1 = pCs.ct*(omega1^2 + omega2^2 + omega3^2 + omega4^2);
 U2 = pCs.ct*pCs.l*(omega2^2 - omega4^2);
