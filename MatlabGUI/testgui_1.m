@@ -125,6 +125,14 @@ function pushbutton1_Callback(hObject, eventdata, handles)
 % t1 = get(handles.edit1,'string');
 % t2 = get(handles.edit2,'string');
 
+funcString = get(handles.edit1,'String');
+funcHandle = str2func(['@(x)' funcString]);
+x = linspace(0,4,100);
+y = funcHandle(x);
+plot(handles.axes1 , x ,y);
+%num = eval(t1); % evalua caracter
+%den = eval(t2);
+
 
 
 
