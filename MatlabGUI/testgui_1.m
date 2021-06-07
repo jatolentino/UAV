@@ -117,6 +117,14 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 
+% --- Executes on button press in pushbutton1.
+function pushbutton1_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+% t1 = get(handles.edit1,'string');
+% t2 = get(handles.edit2,'string');
+
 
 
 
