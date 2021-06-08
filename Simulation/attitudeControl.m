@@ -9,3 +9,9 @@ function [Hdb,FdbT,Cdb,Adci] = attitudeControl(Ad,Bd,Cd,Dd,hz)
     Caug_tilde = [Cd zeros(size(Cd,1))];                        % size(Cd,1) is raw #s of Cd   Caugtilde: 3x9
     Daug_tilde = Dd;                                            % Daugtilde: 3x3
     
+    CtQC = Caug_tilde'*Q*Caug_tilde;
+    CtSC = Caug_tilde'*S*Caug_tilde;
+    
+    QC = Q*Caug_tilde;
+    SC = S*Caug_tilde;
+    
