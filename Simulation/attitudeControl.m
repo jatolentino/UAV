@@ -27,3 +27,7 @@ for i = 1:hz
        else
            Qdb(1+length(CtQC(:,1))*(i-1):length(CtQC(:,1))*i,1+length(CtQC(1,:))*(i-1):length(CtQC(1,:))*i) = CtQC;
            Tdb(1+length(QC(:,1))*(i-1):length(QC(:,1))*i,1+length(QC(1,:))*(i-1):length(QC(1,:))*i) = QC;
+       end
+       Rdb(1+length(R(:,1))*(i-1):length(R(:,1))*i,1+length(R(1,:))*(i-1):length(R(1,:))*i) = R;
+       
+       
