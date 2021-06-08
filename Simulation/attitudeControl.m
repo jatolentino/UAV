@@ -15,3 +15,8 @@ function [Hdb,FdbT,Cdb,Adci] = attitudeControl(Ad,Bd,Cd,Dd,hz)
     QC = Q*Caug_tilde;
     SC = S*Caug_tilde;
     
+    Qdb = zeros(hz*size(CtQC));
+    Tdb = zeros(hz*size(QC));
+    Rdb = zeros(hz*size(R));
+    Cdb = zeros(size(Baug_tilde,1)*hz,size(Baug_tilde,2)*hz);
+    Adci = zeros(size(Aaug_tilde,1)*hz,size(Aaug_tilde,2));
