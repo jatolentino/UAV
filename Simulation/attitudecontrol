@@ -1,0 +1,11 @@
+function [Hdb,FdbT,Cdb,Adci] = attitudeControl(Ad,Bd,Cd,Dd,hz)
+    pCs = plantConstants;
+    Q = pCs.Q;
+    S = pCs.S;
+    R = pCs.R;
+    % Ad6x6  Bd6x3  Cd3x6  Dd3x3
+    Aaug_tilde = [Ad Bd;zeros(flip(size(Bd))) eye(size(Bd,2))]; % size(Bd,2) is column #s of Bd  Augtilde:9x9
+    Baug_tilde = [Bd;eye(size(Bd,2))];                          % Baugtilde: 9x3
+    Caug_tilde = [Cd zeros(size(Cd,1))];                        % size(Cd,1) is raw #s of Cd   Caugtilde: 3x9
+    Daug_tilde = Dd;                                            % Daugtilde: 3x3
+    
