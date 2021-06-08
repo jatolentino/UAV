@@ -36,3 +36,7 @@ for i = 1:hz
                    1+length(Baug_tilde(1,:))*(j-1):length(Baug_tilde(1,:))*j) = Aaug_tilde^(i-j)*Baug_tilde;
            end
        end
+        Adci(1+length(Aaug_tilde(:,1))*(i-1):length(Aaug_tilde(:,1))*i,1:length(Aaug_tilde(1,:))) = Aaug_tilde^(i);
+    end
+    
+    
