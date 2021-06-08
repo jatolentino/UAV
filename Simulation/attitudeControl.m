@@ -38,5 +38,7 @@ for i = 1:hz
        end
         Adci(1+length(Aaug_tilde(:,1))*(i-1):length(Aaug_tilde(:,1))*i,1:length(Aaug_tilde(1,:))) = Aaug_tilde^(i);
     end
-    
+    Hdb = Cdb'*Qdb*Cdb + Rdb;
+    FdbT = [Adci'*Qdb*Cdb ; - Tdb*Cdb];
+
     
