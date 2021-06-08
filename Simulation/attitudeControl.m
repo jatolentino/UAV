@@ -41,4 +41,4 @@ for i = 1:hz
     Hdb = Cdb'*Qdb*Cdb + Rdb;
     FdbT = [Adci'*Qdb*Cdb ; - Tdb*Cdb];
 
-    
+end
