@@ -30,4 +30,9 @@ for i = 1:hz
        end
        Rdb(1+length(R(:,1))*(i-1):length(R(:,1))*i,1+length(R(1,:))*(i-1):length(R(1,:))*i) = R;
        
-       
+       for j = 1:hz
+           if j<=i
+               Cdb(1+length(Baug_tilde(:,1))*(i-1):length(Baug_tilde(:,1))*i,...
+                   1+length(Baug_tilde(1,:))*(j-1):length(Baug_tilde(1,:))*j) = Aaug_tilde^(i-j)*Baug_tilde;
+           end
+       end
