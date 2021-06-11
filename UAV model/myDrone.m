@@ -160,5 +160,50 @@ if k==length(hp2)-1
 end
 end
 
+bodysize=bodysize+k+1;
+for k=1:length(hp3)-1
+    sp1=[hp3(k,1) hp3(k,2) 0;hp3(k+1,1) hp3(k+1,2) 0; hp3(k+1,1) hp3(k+1,2) zb; hp3(k,1)  hp3(k,2) zb]*scale*R;
+  UAV(bodysize+k)=patch(sp1(:,1)+dx,sp1(:,2)+dy,sp1(:,3)+dz,'r');
+if k==length(hp3)-1
+    sp1=[hp3(length(hp3)) hp3(length(hp3),2) 0; hp3(1,1) hp3(1,2) 0; hp3(1,1) hp3(1,2) zb;hp3(length(hp3),1) hp3(length(hp3),2) zb]*scale*R;
+    UAV(bodysize+k+1)=patch(sp1(:,1)+dx,sp1(:,2)+dy,sp1(:,3)+dz,'r');
+end
+end
+bodysize=bodysize+k+1;
+for k=1:length(hp4)-1
+    sp1=[hp4(k,1) hp4(k,2) 0;hp4(k+1,1) hp4(k+1,2) 0; hp4(k+1,1) hp4(k+1,2) zb; hp4(k,1)  hp4(k,2) zb]*scale*R;
+  UAV(bodysize+k)=patch(sp1(:,1)+dx,sp1(:,2)+dy,sp1(:,3)+dz,'r');
+if k==length(hp4)-1
+    sp1=[hp4(length(hp4)) hp4(length(hp4),2) 0; hp4(1,1) hp4(1,2) 0; hp4(1,1) hp4(1,2) zb;hp4(length(hp4),1) hp4(length(hp4),2) zb]*scale*R;
+   UAV(bodysize+k+1)= patch(sp1(:,1)+dx,sp1(:,2)+dy,sp1(:,3)+dz,'r');
+end
+end
+bodysize=bodysize+k+1;
+for k=1:length(hp5)-1
+    sp1=[hp5(k,1) hp5(k,2) 0;hp5(k+1,1) hp5(k+1,2) 0; hp5(k+1,1) hp5(k+1,2) zb; hp5(k,1)  hp5(k,2) zb]*scale*R;
+  UAV(bodysize+k)=patch(sp1(:,1)+dx,sp1(:,2)+dy,sp1(:,3)+dz,'r');
+if k==length(hp5)-1
+    sp1=[hp5(length(hp5)) hp5(length(hp5),2) 0; hp5(1,1) hp5(1,2) 0; hp5(1,1) hp5(1,2) zb;hp5(length(hp5),1) hp5(length(hp5),2) zb]*scale*R;
+   UAV(bodysize+k+1)= patch(sp1(:,1)+dx,sp1(:,2)+dy,sp1(:,3)+dz,'r');
+end
+end
+bodysize=bodysize+k+1;
+for k=1:length(hp6)-1
+    sp1=[hp6(k,1) hp6(k,2) 0;hp6(k+1,1) hp6(k+1,2) 0; hp6(k+1,1) hp6(k+1,2) zb; hp6(k,1)  hp6(k,2) zb]*scale*R;
+  UAV(bodysize+k)=patch(sp1(:,1)+dx,sp1(:,2)+dy,sp1(:,3)+dz,'r');
+if k==length(hp6)-1
+    sp1=[hp6(length(hp6)) hp6(length(hp6),2) 0; hp6(1,1) hp6(1,2) 0; hp6(1,1) hp6(1,2) zb;hp6(length(hp6),1) hp6(length(hp6),2) zb]*scale*R;
+   UAV(bodysize+k+1)= patch(sp1(:,1)+dx,sp1(:,2)+dy,sp1(:,3)+dz,'r');
+end
+end
+bodysize=bodysize+k+1;
+
+hp1=hp1*scale*R;
+hp2=hp2*scale*R;
+hp3=hp3*scale*R;
+hp4=hp4*scale*R;
+hp5=hp5*scale*R;
+hp6=hp6*scale*R;
+
 
 
