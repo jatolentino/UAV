@@ -205,7 +205,6 @@ hp4=hp4*scale*R;
 hp5=hp5*scale*R;
 hp6=hp6*scale*R;
 
-
 zb = 0.21*scale;
 
 UAV(bodysize+1)=patch(hp1(:,1)+dx,hp1(:,2)+dy,hp1(:,3)+dz,'r');
