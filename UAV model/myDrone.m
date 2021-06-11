@@ -205,5 +205,3 @@ hp4=hp4*scale*R;
 hp5=hp5*scale*R;
 hp6=hp6*scale*R;
 
-
-
