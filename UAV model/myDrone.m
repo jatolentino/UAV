@@ -85,4 +85,81 @@ UAV(bodysize+6)=patch(hp4(:,1)+dx,hp4(:,2)+dy,hp4(:,3)+dz,[0.1 0.1 0.1],'FaceAlp
 UAV(bodysize+7)=patch(hp5(:,1)+dx,hp5(:,2)+dy,hp5(:,3)+dz,[0.1 0.1 0.1],'FaceAlpha',0.25);
 UAV(bodysize+8)=patch(hp6(:,1)+dx,hp6(:,2)+dy,hp6(:,3)+dz,[0.1 0.1 0.1],'FaceAlpha',0.25);
 
+% Propellers
+
+x=1.4142*cos(th)*0.06;
+y=1.4142*sin(th)*0.5;
+z=0.22*ones(1,length(th));
+
+h1=[x'+1.7 y' z']*scale*R;
+h2=[x'+1.7 y' z']*scale*R;
+h3=[x'-1.7 y' z']*scale*R;
+h4=[x'-1.7 y' z']*scale*R;
+
+h5=[x'+1.7 y' z']*scale*R;
+h6=[x'+1.7 y' z']*scale*R;
+h7=[x'-1.7 y' z']*scale*R;
+h8=[x'-1.7 y' z']*scale*R;
+
+h9=[x' y'-2 z']*scale*R;
+h10=[x' y'-2 z']*scale*R;
+h11=[x' y'+2 z']*scale*R;
+h12=[x' y'+2 z']*scale*R;
+
+
+UAV(bodysize+9)=patch(h1(:,1)+dx,h1(:,2)+dy,h1(:,3)+dz,[0.1 0.1 0.1]);
+UAV(bodysize+10)=patch(h2(:,1)+dx,h2(:,2)+dy,h2(:,3)+dz,[0.1 0.1 0.1]);
+UAV(bodysize+11)=patch(h3(:,1)+dx,h3(:,2)+dy,h3(:,3)+dz,[0.1 0.1 0.1]);
+UAV(bodysize+12)=patch(h4(:,1)+dx,h4(:,2)+dy,h4(:,3)+dz,[0.1 0.1 0.1]);
+UAV(bodysize+13)=patch(h5(:,1)+dx,h5(:,2)+dy,h5(:,3)+dz,[0.1 0.1 0.1]);
+UAV(bodysize+14)=patch(h6(:,1)+dx,h6(:,2)+dy,h6(:,3)+dz,[0.1 0.1 0.1]);
+UAV(bodysize+15)=patch(h7(:,1)+dx,h7(:,2)+dy,h7(:,3)+dz,[0.1 0.1 0.1]);
+UAV(bodysize+16)=patch(h8(:,1)+dx,h8(:,2)+dy,h8(:,3)+dz,[0.1 0.1 0.1]);
+UAV(bodysize+17)=patch(h9(:,1)+dx,h9(:,2)+dy,h9(:,3)+dz,[0.1 0.1 0.1]);
+UAV(bodysize+18)=patch(h10(:,1)+dx,h10(:,2)+dy,h10(:,3)+dz,[0.1 0.1 0.1]);
+UAV(bodysize+19)=patch(h11(:,1)+dx,h11(:,2)+dy,h11(:,3)+dz,[0.1 0.1 0.1]);
+UAV(bodysize+20)=patch(h12(:,1)+dx,h12(:,2)+dy,h12(:,3)+dz,[0.1 0.1 0.1]);
+
+%% MOTORS
+
+bodysize=bodysize+20;
+
+a=pi/10;
+th=pi/4:a:2*pi+pi/4;
+
+x=1.4142*cos(th)*0.15;
+y=1.4142*sin(th)*0.15;
+z=0*ones(1,length(th));
+
+hp1=[x'+1.7 y' z'];
+hp2=[x'-1.7 y' z'];
+hp3=[x'-1.7 y' z'];
+hp4=[x'+1.7 y' z'];
+hp5=[x' y'-2 z'];
+hp6=[x' y'+2 z'];
+
+zb=0.21;
+
+
+
+for k=1:length(hp1)-1
+    sp1=[hp1(k,1) hp1(k,2) 0;hp1(k+1,1) hp1(k+1,2) 0; hp1(k+1,1) hp1(k+1,2) zb; hp1(k,1)  hp1(k,2) zb]*scale*R;
+  UAV(bodysize+k)=patch(sp1(:,1)+dx,sp1(:,2)+dy,sp1(:,3)+dz,'r');
+if k==length(hp1)-1
+    sp1=[hp1(length(hp1),1) hp1(length(hp1),2) 0; hp1(1,1) hp1(1,2) 0; hp1(1,1) hp1(1,2) zb;hp1(length(hp1),1) hp1(length(hp1),2) zb]*scale*R;
+  UAV(bodysize+k+1)=patch(sp1(:,1)+dx,sp1(:,2)+dy,sp1(:,3)+dz,'r');
+end
+end
+bodysize=bodysize+k+1;
+for k=1:length(hp2)-1
+    sp1=[hp2(k,1) hp2(k,2) 0;hp2(k+1,1) hp2(k+1,2) 0; hp2(k+1,1) hp2(k+1,2) zb; hp2(k,1)  hp2(k,2) zb]*scale*R;
+  UAV(bodysize+k)=patch(sp1(:,1)+dx,sp1(:,2)+dy,sp1(:,3)+dz,'r');
+if k==length(hp2)-1
+    sp1=[hp2(length(hp2)) hp2(length(hp2),2) 0; hp2(1,1) hp2(1,2) 0; hp2(1,1) hp2(1,2) zb;hp2(length(hp2),1) hp2(length(hp2),2) zb]*scale*R;
+  UAV(bodysize+k+1)=patch(sp1(:,1)+dx,sp1(:,2)+dy,sp1(:,3)+dz,'r');
+end
+end
+
+
+
 
