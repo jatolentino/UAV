@@ -205,3 +205,19 @@ hp4=hp4*scale*R;
 hp5=hp5*scale*R;
 hp6=hp6*scale*R;
 
+
+zb = 0.21*scale;
+
+UAV(bodysize+1)=patch(hp1(:,1)+dx,hp1(:,2)+dy,hp1(:,3)+dz,'r');
+UAV(bodysize+2)=patch(hp2(:,1)+dx,hp2(:,2)+dy,hp2(:,3)+dz,'r');
+UAV(bodysize+3)=patch(hp3(:,1)+dx,hp3(:,2)+dy,hp3(:,3)+dz,'r');
+UAV(bodysize+4)=patch(hp4(:,1)+dx,hp4(:,2)+dy,hp4(:,3)+dz,'r');
+UAV(bodysize+5)=patch(hp5(:,1)+dx,hp5(:,2)+dy,hp5(:,3)+dz,'r');
+UAV(bodysize+6)=patch(hp6(:,1)+dx,hp6(:,2)+dy,hp6(:,3)+dz,'r');
+
+UAV(bodysize+7)=patch(hp1(:,1)+dx,hp1(:,2)+dy,hp1(:,3)+zb+dz,'r');
+UAV(bodysize+8)=patch(hp2(:,1)+dx,hp2(:,2)+dy,hp2(:,3)+zb+dz,'r');
+UAV(bodysize+9)=patch(hp3(:,1)+dx,hp3(:,2)+dy,hp3(:,3)+zb+dz,'r');
+UAV(bodysize+10)=patch(hp4(:,1)+dx,hp4(:,2)+dy,hp4(:,3)+zb+dz,'r');
+UAV(bodysize+11)=patch(hp5(:,1)+dx,hp5(:,2)+dy,hp5(:,3)+zb+dz,'r');
+UAV(bodysize+12)=patch(hp6(:,1)+dx,hp6(:,2)+dy,hp6(:,3)+zb+dz,'r');
