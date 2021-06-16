@@ -58,7 +58,7 @@ Creating ReadMe's for your Github repository can be tedious.  I hope this templa
 
 ## Author Info
 
-- Twitter - [@jamesqquick](https://twitter.com/jamesqquick)
-- Website - [James Q Quick](https://jamesqquick.com)
+- Twitter - [@some](https://twitter.com/some)
+- Website - [some](https://some.com)
 
 [Back To The Top](#read-me-template)
