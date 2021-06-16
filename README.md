@@ -8,7 +8,6 @@ The goal of this project is to control the autonomous navigation of a drone, mak
 ![Project Image](https://github.com/josetv91/UAV/blob/main/path.png)
 
 > This is a ReadMe template to help save you time and effort.
-
 ---
 ### Table of Contents
 You're sections headers will be used to reference location of destination.
