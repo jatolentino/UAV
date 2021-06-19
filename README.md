@@ -20,7 +20,6 @@ You're sections headers will be used to reference location of destination.
 - [License](#license)
 - [Author Info](#author-info)
 
-
 ---
 ## Description
 
