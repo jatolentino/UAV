@@ -34,7 +34,6 @@ Creating ReadMe's for your Github repository can be tedious.  I hope this templa
 
 ---
 
-
 ## How To Use
 
 #### Installation
