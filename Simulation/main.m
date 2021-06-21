@@ -128,6 +128,5 @@ for itotal = 1:outterLoops-1      % 251
         Adcistore{counter} = Adci;
         References{counter} = reference;
        
-
     end
 end
