@@ -18,6 +18,7 @@ zlabel('Z(m)')
 [xc, yc, zc] = cylinder([0.1 0.0]);  % for a cone
 [x, y, z] = cylinder([0.2 0.2]);
  
+ 
 h(1) = surface(xc, zc, -yc, 'FaceColor', 'red');
 h(2) = surface(z, y, 0.5*x,'FaceColor', 'blue');
 h(3) = surface(-z, y, 0.5*x, 'FaceColor', 'yellow');
