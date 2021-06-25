@@ -67,7 +67,6 @@ for i = 1: length(z)
     %pause;
 end
 
-
 %% PART TO SAVE VIDEO
 %v = VideoWriter('mydrone.avi');
 %v.FrameRate = 10;
