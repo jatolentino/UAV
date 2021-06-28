@@ -33,7 +33,6 @@ Creating ReadMe's for your Github repository can be tedious.  I hope this templa
 - Technology 2
 
 [Back To The Top](#read-me-template)
-
 ---
 ## How To Use
 
