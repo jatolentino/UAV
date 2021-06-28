@@ -10,7 +10,6 @@ The goal of this project is to control the autonomous navigation of a drone, mak
 
 > This is a ReadMe template to help save you time and effort.
 
-
 ---
 
 ### Table of Contents
