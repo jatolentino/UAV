@@ -64,4 +64,3 @@ Creating ReadMe's for your Github repository can be tedious.  I hope this templa
 - Website - [some](https://some.com)
 
 [Back To The Top](#read-me-template)
-
