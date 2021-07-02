@@ -24,7 +24,6 @@ pt = 0;
 qt = 0;
 rt = 0;
 
-
 % 1.3 Initial propellers velocities
 omega1=110*pi/3; % rad/s at t = -1s
 omega2=110*pi/3; % rad/s at t = -1s
