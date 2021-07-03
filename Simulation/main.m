@@ -15,7 +15,6 @@ phit = 0;
 thetat = 0;
 psit = 0;
 
-
 % 1.2 Initial velocities
 ut = 0;
 vt = 0;
