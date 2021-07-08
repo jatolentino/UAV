@@ -1,10 +1,11 @@
 # UAV Control
 
-The goal of this project is to control the autonomous navigation of a drone, making use of the equations that describe its atitude and position such as any user can upload a path using coordinates, weight points or 3D trajectories expressed in equations.
+The goal of this project is to control the autonomous navigation of a drone, making use of the equations that describe its atitude and position an implenent a software and simulation environment that allows to test the performace when a Machine learning algorithm is added to the control system study.
+
 # Matlab/Octave simulation
 As an initial approach to simulate the drone navigation, the softwares Octave or Matlab have been utilized to provide trajectories and compute the equations of the state-space model. Due to the high non-linearities of the plant, a novel control method is yet to be tested and possibly compared against traditional control algorithms.  
 
-The goal of this project is to control the autonomous navigation of a drone, making use of the equations that describe its atitude and position such as any user can upload a path using coordinates, weight points or 3D trajectories expressed in equations.
+In the clip below, we conducted two test to demostrate that indeed, ML can enhance the tracking, decreasing the overshoot at the very beginning of the test.
 
 ![Project Image](https://github.com/josetv91/UAV/blob/main/path.png)
 
