@@ -25,7 +25,6 @@ You're sections headers will be used to reference location of destination.
 
 ---
 
-
 ## Description
 
 Creating ReadMe's for your Github repository can be tedious.  I hope this template can save you time and effort as well as provide you with some consistency across your projects.
@@ -65,4 +64,3 @@ Creating ReadMe's for your Github repository can be tedious.  I hope this templa
 - Website - [some](https://some.com)
 
 [Back To The Top](#read-me-template)
-
