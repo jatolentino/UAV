@@ -50,7 +50,6 @@ outterLoops = length(t);        % 251 for the Feedback
 % 2.2 Initial and future States
 states = [ut,vt,wt,pt,qt,rt,xt,yt,zt,phit,thetat,psit];
 
-
 % 2.3 Choosing the trajectory and getting xyz and dot ref
 [x_ref,x_dot_ref,x_dotdot_ref,y_ref,y_dot_ref,y_dotdot_ref,z_ref,z_dot_ref,z_dotdot_ref,psi_ref] = trajectoryGen(1,t); % 1 refers to the path1
 
