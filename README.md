@@ -11,7 +11,6 @@ In the clip below, we conducted two test to demostrate that indeed, ML can enhan
 
 > This is a ReadMe template to help save you time and effort.
 
-
 ---
 
 ### Table of Contents
