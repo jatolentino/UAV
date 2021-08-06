@@ -5,6 +5,7 @@ The goal of this project is to control the autonomous navigation of a drone, mak
 # Matlab/Octave simulation
 As an initial approach to simulate the drone navigation, the softwares Octave or Matlab have been utilized to provide trajectories and compute the equations of the state-space model. Due to the high non-linearities of the plant, a novel control method is yet to be tested and possibly compared against traditional control algorithms.  
 
+
 In the clip below, we conducted two test to demostrate that indeed, ML can enhance the tracking, decreasing the overshoot at the very beginning of the test.
 
 ![Project Image](https://github.com/josetv91/UAV/blob/main/path.png)
