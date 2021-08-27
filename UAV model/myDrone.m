@@ -11,6 +11,7 @@ az=0;
 
 %M1=Plot_UAVe(x1(1),y1(1),z1(1),0,0,phi(1),1.2); % Plot UAV initial position x1,y1 and phi orientation
 
+
 Rx=[ 1, 0, 0; 0, cos(ax), -sin(ax); 0, sin(ax), cos(ax)];
 Ry=[ cos(ay), 0, sin(ay); 0, 1, 0; -sin(ay), 0, cos(ay)];
 Rz=[ cos(az), -sin(az), 0; sin(az), cos(az), 0; 0, 0,1];
