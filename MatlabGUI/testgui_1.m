@@ -128,7 +128,7 @@ x = linspace(0,4,100);
 y = funcHandle(x);
 plot(handles.axes1 , x ,y);
 %num = eval(t1); % evalua caracter
-%den = eval(t2);
+%dena = eval(t2);
 
 %str = sprintf(
 %planta = tf(num,den);
