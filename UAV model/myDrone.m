@@ -9,7 +9,6 @@ ax=0;
 ay=0;
 az=0;
 
-
 %M1=Plot_UAVe(x1(1),y1(1),z1(1),0,0,phi(1),1.2); % Plot UAV initial position x1,y1 and phi orientation
 
 
