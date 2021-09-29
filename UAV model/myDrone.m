@@ -143,7 +143,6 @@ hp6=[x' y'+2 z'];
 zb=0.21;
 
 
-
 for k=1:length(hp1)-1
     sp1=[hp1(k,1) hp1(k,2) 0;hp1(k+1,1) hp1(k+1,2) 0; hp1(k+1,1) hp1(k+1,2) zb; hp1(k,1)  hp1(k,2) zb]*scale*R;
   UAV(bodysize+k)=patch(sp1(:,1)+dx,sp1(:,2)+dy,sp1(:,3)+dz,'r');
