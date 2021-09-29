@@ -49,7 +49,6 @@ zb = 0.2;
 body1=[body(:,1) body(:,2) body(:,3)+zb];
 bodysize=1;
 
-
 for k=1:length(body(:,1))-1
     sp1=[body(k,1) body(k,2) body(k,3);body(k+1,1) body(k+1,2) body(k,3); body(k+1,1) body(k+1,2) body1(k,3); body(k,1)  body(k,2) body1(k,3)]*scale*R;
   UAV(k)=patch(sp1(:,1)+dx,sp1(:,2)+dy,sp1(:,3)+dz,[0.1 0.1 0.1]);
