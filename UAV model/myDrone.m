@@ -106,7 +106,6 @@ h10=[x' y'-2 z']*scale*R;
 h11=[x' y'+2 z']*scale*R;
 h12=[x' y'+2 z']*scale*R;
 
-
 UAV(bodysize+9)=patch(h1(:,1)+dx,h1(:,2)+dy,h1(:,3)+dz,[0.1 0.1 0.1]);
 UAV(bodysize+10)=patch(h2(:,1)+dx,h2(:,2)+dy,h2(:,3)+dz,[0.1 0.1 0.1]);
 UAV(bodysize+11)=patch(h3(:,1)+dx,h3(:,2)+dy,h3(:,3)+dz,[0.1 0.1 0.1]);
