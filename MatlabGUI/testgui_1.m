@@ -2,7 +2,6 @@ function varargout = testgui_1(varargin)
 % TESTGUI_1 MATLAB code for testgui_1.fig
 %      TESTGUI_1, by itself, creates a new TESTGUI_1 or raises the existing
 %      singleton*.
-%
 %      H = TESTGUI_1 returns the handle to a new TESTGUI_1 or the handle to
 %      the existing singleton*.
 %
