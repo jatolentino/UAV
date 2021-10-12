@@ -36,6 +36,7 @@ U2 = pCs.ct*pCs.l*(omega2^2 - omega4^2);
 U3 = pCs.ct*pCs.l*(omega3^2 + omega1^2);
 U4 = pCs.cq*(-omega1^2 + omega2^2 - omega3^2 + omega4^2);
 
+
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 2. Calling psi_ref from the trajectoryGen.m 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
