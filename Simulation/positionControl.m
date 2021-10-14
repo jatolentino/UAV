@@ -21,6 +21,7 @@ phi = states(10);
 theta = states(11);
 psi = states(12);
 
+
 %% 1. Calculating xdot, ydot and zdot through R*[u;v;w]
 % Rotation matrix z-y-x
 Rzyx = [cos(theta)*cos(psi) sin(phi)*sin(theta)*cos(phi)-cos(phi)*sin(psi)  cos(phi)*sin(theta)*cos(psi)+sin(phi)*sin(psi); ...
