@@ -50,6 +50,7 @@ vx = x_dotdot_ref - ux; % vx = xdd
 vy = y_dotdot_ref - uy; % 
 vz = z_dotdot_ref - uz; % 
 
+
 a = vx./(vz + g);
 b = vy./(vz + g);
 c = cos(psi_ref);
